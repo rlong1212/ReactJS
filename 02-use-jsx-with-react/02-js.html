@@ -1,0 +1,19 @@
+<div id="root"></div>
+
+<!--JSX is similar to html and behaves in similar ways-->
+<!--it is easier to create UIs using JSX as it is more ergonomic-->
+
+<!--converting React to use JSX-->
+
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type="text/babel">
+	const rootElement = document.getElementById('root')
+
+	const content = 'Hello World'
+	const element = <div className="container">{(() => content)()}</div>
+
+	ReactDOM.render(element, rootElement)
+</script>
