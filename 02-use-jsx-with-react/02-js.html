@@ -13,7 +13,20 @@
 	const rootElement = document.getElementById('root')
 
 	const content = 'Hello World'
-	const element = <div className="container">{(() => content)()}</div>
+	const myClassName = 'container'
+	const props = {
+		className: 'container',
+		children: 'Hello World'
+	}
+	const element = (
+		<div {...props} className="my-class" />
+	)
 
 	ReactDOM.render(element, rootElement)
 </script>
+
+
+<!--
+	<div {...props} className="my-class" />
+	overrides the 'container' className
+ -->
